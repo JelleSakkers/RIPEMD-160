@@ -5,6 +5,7 @@
 
 #include <stdlib.h>
 #include <stdint.h>
+#include <string.h>
 
 #define BLOCK_SIZE 64
 #define RIPEMD160_DIGEST_SIZE 20
