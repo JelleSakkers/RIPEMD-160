@@ -1,25 +1,7 @@
-#include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
 
-#define BLOCK_SIZE 64
-#define RIPEMD160_DIGEST_SIZE 20
-
-/* boolean functions */
-#define F1(x, y, z) ((x) ^ (y) ^ (z))
-#define F2(x, y, z) (((x) & (y)) | (~(x) & (z)))
-#define F3(x, y, z) (((x) | ~(y)) ^ (z))
-#define F4(x, y, z) (((x) & (z)) | ((y) & ~(z)))
-#define F5(x, y, z) ((x) ^ ((y) | ~(z)))
-
-/* cyclic left-shift the 32-bit word n left by s bits */
-#define ROL(s, n) (((n) << (s)) | ((n) >> (32-(s))))
-
-typedef struct _RIPEMD160_CTX {
-    uint32_t total[2];
-    uint32_t state[5];
-    uint8_t buffer[BLOCK_SIZE];
-} RIPEMD160_CTX;
+#include "ripemd160.h"
 
 void ripemd160_init(RIPEMD160_CTX *ctx)
 {
