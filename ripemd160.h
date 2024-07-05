@@ -17,7 +17,7 @@
 /* cyclic left-shift the 32-bit word n left by s bits */
 #define ROL(s, n) (((n) << (s)) | ((n) >> (32-(s))))
 
-/* Macro to store a 32-bit unsigned integer in little-endian byte order */
+/* store a 32-bit unsigned integer in little-endian byte order */
 #define PUT_UINT32_LE(n, dst, i)                    \
     do {                                            \
         (dst)[(i) + 0] = (uint8_t)((n)      );      \
