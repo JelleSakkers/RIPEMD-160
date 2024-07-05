@@ -1,3 +1,8 @@
+/*
+   Source:
+   https://homes.esat.kuleuven.be/~bosselae/ripemd160/pdf/AB-9601/AB-9601.pdf
+*/
+
 #include <stdint.h>
 #include <string.h>
 
